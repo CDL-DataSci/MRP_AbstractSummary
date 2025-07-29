@@ -30,13 +30,13 @@ val_df = df.drop(train_df.index)
 base_model_name = "meta-llama/Llama-3-8b-hf"
 tokenizer = AutoTokenizer.from_pretrained(base_model_name, trust_remote_code=True)
 
-# Fix pad token issue (LLaMA models don't define pad_token by default)
+# Fix pad token issue
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
 model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.float16)
 
-# Add LoRA
+#Add LoRA
 lora_config = LoraConfig(
     r=args.lora_rank,
     lora_alpha=16,
@@ -47,16 +47,16 @@ lora_config = LoraConfig(
 )
 model = get_peft_model(model, lora_config)
 
-# Tokenized datasets
+#Tokenized datasets
 train_dataset = TextDataset(train_df, tokenizer, max_length=512)
 val_dataset = TextDataset(val_df, tokenizer, max_length=512)
 train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=args.batch_size)
 
-# DPDD monitor
+#DPDD monitor
 dpdd_monitor = DPDDMonitor() if args.dpdd else None
 
-# Train
+#Train
 trained_model = train_loop(
     model,
     train_loader,

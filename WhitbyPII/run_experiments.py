@@ -1,3 +1,5 @@
+# run_experiments.py
+
 import os
 import json
 import random
@@ -6,15 +8,12 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from torch.utils.data import DataLoader
 from sklearn.model_selection import train_test_split
-
 from utils.trainer import train_loop, TextDataset
 from dpdd.monitor_dpdd import DPDDMonitor
-from peft import get_peft_model, LoraConfig, TaskType  # Requires peft installed
-
+from peft import get_peft_model, LoraConfig, TaskType 
 from transformers.utils import logging
-logging.set_verbosity_error()
+logging.set_verbosity_error() 
 
-# ---- Paths and Constants ---- #
 EXPERIMENT_CSV = "data/factorial_experiments.csv"
 DATA_PATH = "data/train_with_canaries_cleaned.csv"
 MAX_LENGTH = 512
@@ -24,14 +23,13 @@ NUM_EPOCHS = 2
 MODEL_NAME = "meta-llama/Llama-3.1-8B"
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# ---- Tokenizer ---- #
+#Tokenizer
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, token=True, trust_remote_code=True)
 
-# Fix pad token issue
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
     
-# ---- Load Full Dataset ---- #
+#Load Dataset
 df_full = pd.read_csv(DATA_PATH, sep="\t", on_bad_lines='skip')
 
 def get_filtered_data(year_group):
@@ -58,11 +56,11 @@ def apply_lora(model, r):
     model.print_trainable_parameters()
     return model
 
-# ---- Load Experiment Grid ---- #
+#Load Experiment Factors
 configs = pd.read_csv(EXPERIMENT_CSV)
 random.seed(42)
 
-# ---- Run Experiments ---- #
+#Run All Experiments
 for idx, row in configs.iterrows():
     print(f"\n🔁 Running config {idx+1}/{len(configs)}")
 
@@ -114,7 +112,7 @@ for idx, row in configs.iterrows():
             device=DEVICE
         )
 
-        # ---- Generate Summaries for Validation Set ---- #
+        #Generate Summaries
         model.eval()
         generated = []
 
@@ -141,10 +139,8 @@ for idx, row in configs.iterrows():
                 "config": exp_id
             })
 
-        # ---- Save Generated Summaries ---- #
+        #Save Generated
         out_path = os.path.join(save_dir, "generated_summaries.jsonl")
         with open(out_path, "w") as f:
             for entry in generated:
                 f.write(json.dumps(entry) + "\n")
-
-        print(f"[✓] Saved generated summaries to {out_path}")

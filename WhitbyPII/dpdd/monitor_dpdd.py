@@ -20,7 +20,6 @@ class DPDDMonitor:
         self.grad_norms.append(total_norm)
 
     def compute_dpdd_score(self):
-        # We define DPDD as sensitivity * noise_multiplier
         if not self.grad_norms:
             return None
         avg_norm = np.mean(self.grad_norms)

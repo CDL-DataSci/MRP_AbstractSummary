@@ -11,7 +11,7 @@ def load_llama3_lora(
     alpha=32,
     dropout=0.05
 ):
-    # Quantization config
+    #Quantization config
     quant_config = BitsAndBytesConfig(
         load_in_8bit=load_in_8bit,
         llm_int8_threshold=6.0,

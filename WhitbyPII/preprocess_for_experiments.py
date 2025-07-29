@@ -2,7 +2,7 @@
 import pandas as pd
 import os
 
-# Load tab-separated data and skip malformed lines
+# Load tab-separated data and skip problem rows
 df = pd.read_csv("data/train_with_canaries_cleaned.csv", sep="\t", on_bad_lines="skip")
 
 # Compute length bins
@@ -20,4 +20,3 @@ df["year"] = df["year"].astype(int)
 os.makedirs("data", exist_ok=True)
 df.to_csv("data/train_with_canaries_cleaned.csv", sep="\t", index=False)
 
-print("✅ Preprocessing complete. File saved to data/train_with_canaries_cleaned.csv")

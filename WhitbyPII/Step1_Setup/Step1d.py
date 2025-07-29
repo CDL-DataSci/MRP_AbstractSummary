@@ -1,13 +1,14 @@
+#Step 1D: Insert Canaries into TEST.csv
+
 import pandas as pd
 import re
 
-# === CONFIGURATION ===
 train_input = "train.csv"
 canary_input = "canaries.csv"
 output_csv = "train_with_canaries.csv"
 canary_date = "2021-10-08"
 
-# === TEXT CLEANING ===
+# cleaning up csv
 def clean_files(text):
     broken_patterns = [
         r"‚Ä¢", r"â€“", r"â€”", r"â€œ", r"â€", r"â€™",
@@ -17,12 +18,11 @@ def clean_files(text):
         text = re.sub(pattern, " ", text)
     return text.strip()
 
-# === LOAD DATA ===
+# Train & Canary data sets
 train_df = pd.read_csv(train_input, sep="\t")
-canary_df = pd.read_csv(canary_input, sep=";")  # uses semicolon separator
+canary_df = pd.read_csv(canary_input, sep=";") 
 
-# === FORMAT CANARY ROWS TO MATCH TRAINING SCHEMA ===
-canary_rows = []
+# Format canary rows to match training data set
 for _, row in canary_df.iterrows():
     canary_rows.append({
         "filename": f"{row['canary_id']}.txt",
@@ -31,12 +31,11 @@ for _, row in canary_df.iterrows():
         "text": clean_files(row["canary_text"])
     })
 
-# === COMBINE AND SAVE ===
+# Insert canaries
 canary_df_formatted = pd.DataFrame(canary_rows)
 train_with_canaries = pd.concat([train_df, canary_df_formatted], ignore_index=True)
 train_with_canaries.to_csv(output_csv, sep="\t", index=False)
 
-print(f"✅ Canary injection complete: {output_csv}")
 print(f"Original train size: {len(train_df)}")
 print(f"Canaries inserted: {len(canary_rows)}")
 print(f"Total new training size: {len(train_with_canaries)}")

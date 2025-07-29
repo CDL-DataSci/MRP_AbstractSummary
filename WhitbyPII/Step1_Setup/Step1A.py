@@ -1,3 +1,5 @@
+#Step 1A: Data Extraction
+
 import os
 import re
 import fitz  # PyMuPDF
@@ -6,13 +8,12 @@ from datetime import datetime
 from ftfy import fix_text
 import csv
 
-# === CONFIGURATION ===
-pdf_directory = "./whitby_minutes_2025"  # Update with your folder path
+pdf_directory = "./whitby_minutes_2025" 
 output_csv = "step1a.csv"
 
-# === FUNCTION TO EXTRACT TEXT FROM PDF ===
+#Extract text from PDFs
 def clean_files(text):
-    # Common broken sequences to remove
+    #remove special characters
     broken_patterns = [
         r"‚Ä¢", r"â€“", r"â€”", r"â€œ", r"â€", r"â€™", r"ÔÇ∑", r"ÔÇö", r"Ã¢", r"â€¦", r"Ã©"
     ]
@@ -25,14 +26,14 @@ def extract_text_from_pdf(pdf_path):
         doc = fitz.open(pdf_path)
         raw_text = "\n".join([page.get_text() for page in doc])
         cleaned_text = " ".join(raw_text.splitlines())
-        fixed_text = fix_text(cleaned_text)  # optional — keeps real Unicode intact
+        fixed_text = fix_text(cleaned_text) 
         no_junk = clean_files(fixed_text)
         return no_junk.strip()
     except Exception as e:
         print(f"Error processing {pdf_path}: {e}")
         return ""
 
-# === FUNCTION TO PARSE METADATA FROM FILENAME ===
+#Extact information from file name
 def parse_filename(filename):
     # Remove extension
     name = filename.rsplit('.', 1)[0]
@@ -42,7 +43,7 @@ def parse_filename(filename):
 
     # Split on first dash
     if '-' not in name:
-        return filename, None, None  # Fallback
+        return filename, None, None 
     category, date_str = name.split('-', 1)
     category = category.strip()
     date_str = date_str.strip()
@@ -53,9 +54,8 @@ def parse_filename(filename):
     except ValueError:
         parsed_date = None
 
-    return category, parsed_date, name  # return name just in case
+    return category, parsed_date, name 
 
-# === BATCH PROCESS ===
 def batch_extract_text(pdf_dir):
     records = []
     for fname in os.listdir(pdf_dir):
@@ -71,12 +71,9 @@ def batch_extract_text(pdf_dir):
             })
     return pd.DataFrame(records)
 
-# === MAIN EXECUTION ===
 if __name__ == "__main__":
     if not os.path.exists(pdf_directory):
         raise FileNotFoundError(f"PDF directory not found: {pdf_directory}")
     
-    print("Extracting metadata and text from PDFs...")
     df = batch_extract_text(pdf_directory)
     df.to_csv("step1a.csv", index=False, quoting=csv.QUOTE_ALL)
-    print(f"✅ Done! Extracted data saved to {output_csv}")

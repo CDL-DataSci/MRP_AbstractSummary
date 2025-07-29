@@ -6,7 +6,7 @@ from transformers import get_scheduler
 from dpdd.monitor_dpdd import DPDDMonitor
 from tqdm import tqdm
 
-# ---- Simple Dataset Wrapper ---- #
+#Simple Dataset Wrapper
 class TextDataset(Dataset):
     def __init__(self, dataframe, tokenizer, max_length):
         self.texts = dataframe["text"].astype(str).tolist()
@@ -24,7 +24,7 @@ class TextDataset(Dataset):
     def __getitem__(self, idx):
         return {key: val[idx] for key, val in self.examples.items()}
 
-# ---- Save HuggingFace-Compatible Format ---- #
+#Save HuggingFace-Compatible Format
 def save_huggingface_format(model, tokenizer, output_dir):
     os.makedirs(output_dir, exist_ok=True)
     try:
@@ -36,7 +36,7 @@ def save_huggingface_format(model, tokenizer, output_dir):
         model.save_pretrained(output_dir)
         tokenizer.save_pretrained(output_dir)
 
-# ---- Training Loop ---- #
+#Training Loop
 def train_loop(
     model,
     train_dataloader,
@@ -51,7 +51,7 @@ def train_loop(
     model.train()
     model.to(device)
 
-    # Optimizer & Scheduler
+    # Optimizer
     optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
     num_training_steps = num_epochs * len(train_dataloader)
     scheduler = get_scheduler(

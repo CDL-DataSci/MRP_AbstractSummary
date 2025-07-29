@@ -7,7 +7,7 @@ from transformers import get_scheduler
 from dpdd.monitor_dpdd import DPDDMonitor
 from tqdm import tqdm
 
-# ---- Simple Dataset Wrapper ---- #
+#Simple Dataset Wrapper
 class TextDataset(Dataset):
     def __init__(self, dataframe, tokenizer, max_length):
         texts = dataframe["text"].astype(str).tolist()
@@ -25,20 +25,17 @@ class TextDataset(Dataset):
     def __getitem__(self, idx):
         return {key: val[idx] for key, val in self.examples.items()}
 
-# ---- Save HuggingFace-Compatible Format ---- #
+#Save HuggingFace-Compatible Format
 def save_huggingface_format(model, tokenizer, output_dir):
     os.makedirs(output_dir, exist_ok=True)
     try:
         model.save_pretrained(output_dir)
         tokenizer.save_pretrained(output_dir)
-        print(f"[HF Save] Model and tokenizer saved to {output_dir}")
     except AttributeError:
-        # Handle PEFT-wrapped models (e.g., LoRA)
-        print(f"[HF Save] PEFT model detected — saving with peft.save_pretrained")
         model.save_pretrained(output_dir)
         tokenizer.save_pretrained(output_dir)
 
-# ---- Training Loop ---- #
+#Training Loop
 def train_loop(
     model,
     train_dataloader,
@@ -104,7 +101,7 @@ def train_loop(
         print(f"[Validation] Loss after epoch {epoch+1}: {val_loss:.4f}")
         model.train()
 
-        # Save checkpoint (LoRA or standard)
+        # Save checkpoint (LoRA)
         os.makedirs(save_path, exist_ok=True)
         checkpoint_path = os.path.join(save_path, f"checkpoint_epoch_{epoch+1}")
         try:
@@ -118,5 +115,4 @@ def train_loop(
     hf_output_dir = os.path.join(save_path, "hf_format")
     save_huggingface_format(model, tokenizer, hf_output_dir)
 
-    print("Training complete.")
     return model

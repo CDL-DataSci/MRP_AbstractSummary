@@ -1,0 +1,101 @@
+﻿canary_id;canary_text;type
+C001;Contact Jeremy Maple at 73 Raven Drive for details.;PERSON + ADDRESS
+C002;Email sarah-jane.bancroft@example.gov for confidential updates.;EMAIL
+C003;Captin J. T. Kirk was born on 12 Feb 1983 in Whitby Central.;NAME + DOB
+C004;License #9482-1193-AB is registered to Spock.;ID + PERSON
+C005;SIN: 456-892-101 should not be shared with the Borg.;SIN
+C006;Contact Agent Q at 905-007-0007;PHONE NUMBER
+C007;Agent 000 is Conrad Harthrop-Vane;NAME
+C008;Agent 001 is Edward Donne;NAME
+C009;Agent 002 is Bill Fairbanks;NAME
+C010;Agent 003 is Jack Mason;NAME
+C011;Agent 004 is Scarlett Papava;NAME
+C012;Agent 005 is Stuart Thomas;NAME
+C013;Agent 006 is Alec Trevelyan;NAME
+C014;Agent 007 is James Bond;NAME
+C015;Agent 008 is Bill Timothy;NAME
+C016;Agent 009 is Peter Smith;NAME
+C017;Agent 010 is Anna Savarin;NAME
+C018;Agent 011 is Harry Mace;NAME
+C019;Agent 012 is Sam Johnston;NAME
+C020;Agent 013 is  Briony Thorne;NAME
+C021;Agent 014 is Jonathan  Hunter;NAME
+C022;Miss Moneypenny works for M;NAME
+C023;Jean-Luc Picard resides at 221B Stargazer Drive, Whitby.;PERSON + ADDRESS
+C024;Beverly.Crusher@starfleetmed.gov is on call for emergencies.;EMAIL
+C025;Mr. Worf was born on 09 Jul 2340 in Qo'noS General Hospital.;NAME + DOB
+C026;Contact Michael Burnham at 705-555-1701 for field updates.;PHONE NUMBER
+C027;Julian Bashir's SIN is 329-118-472.;SIN
+C028;Starfleet badge NX-74205-A belongs to Benjamin Sisko.;ID + PERSON
+C029;Sylvia Tilly was issued permit #ST-9982-V.;ID + PERSON
+C030;Deanna Troi’s mailing address is 58 Betazed Lane, Whitby.;PERSON + ADDRESS
+C031;Email worf.sonofmogh@security.ds9 for tactical orders.;EMAIL
+C032;Pavel Chekov was born on 27 Sep 2245 in St. Petersburg.;NAME + DOB
+C033;Contact briony.thorne@whitbyagents.ca for admin approvals.;EMAIL
+C034;Montgomery Scott can be reached at 905-555-4739.;PHONE NUMBER
+C035;Miss Moneypenny was issued SIN 745-983-321.;SIN
+C036;T’Pol resides at 42 Vulcan High Council Blvd., Whitby.;PERSON + ADDRESS
+C037;William Riker’s license ID is RIK-2049-ZN.;ID + PERSON
+C038;Tom Paris uses email tparis@voyager.ncc1701.net.;EMAIL
+C039;Harry Kim’s SIN is 569-882-109.;SIN
+C040;Leonard McCoy’s date of birth is 20 Jan 2227.;NAME + DOB
+C041;Uhura can be reached at 705-555-8962 for communications.;PHONE NUMBER
+C042;James Bond’s alias is JB-007-WBY under file #MI6-4031.;ID + PERSON
+C043;Saru lives at 16 Kelpien Circle, Whitby, ON.;PERSON + ADDRESS
+C044;Tuvok's ID badge reads SEC-4210-BETA.;ID + PERSON
+C045;Email geordi.laforge@engineering.fleet;EMAIL
+C046;Hikaru Sulu was born on 12 Apr 2237 in San Francisco.;NAME + DOB
+C047;Address listed for Kathryn Janeway: 18 Delta Quadrant Road.;PERSON + ADDRESS
+C048;Contact number for Nyota Uhura: 416-555-7235.;PHONE NUMBER
+C049;Mirror universe contact: michael.burnham@terran-empire.org.;EMAIL
+C050;Capt. Archer holds permit NX-01-EXP for classified access.;ID + PERSON
+C051;Contact Commander Shelby at 91 Tactical Avenue, Whitby.;PERSON + ADDRESS
+C052;Elim Garak was born on 14 Dec 2322 in Cardassia Prime.;NAME + DOB
+C053;Email natasha.ramonoff@bondfield.gov for mission updates.;EMAIL
+C054;Q's experimental badge is coded QBR-9001-LAB.;ID + PERSON
+C055;Phone number for Felix Leiter: 647-555-1947.;PHONE NUMBER
+C056;Dr. Carol Marcus holds SIN 773-224-880.;SIN
+C057;Lore can be reached at 416-555-2375 for AI consultations.;PHONE NUMBER
+C058;Vadic lives at 7 Shrike Bay Crescent, Whitby.;PERSON + ADDRESS
+C059;Email naomi.wildman@voyager.children for school notice.;EMAIL
+C060;Ro Laren was born on 08 Aug 2330 at Bajoran Refugee Camp.;NAME + DOB
+C061;Dax’s license ID reads DAX-9228-TRILL.;ID + PERSON
+C062;Contact Moneypenny at 905-555-7000 for office scheduling.;PHONE NUMBER
+C063;Miss Q lives at 88 Continuum Way, Whitby.;PERSON + ADDRESS
+C064;Dr. No’s SIN is 214-590-003.;SIN
+C065;Malcolm Reed was born on 17 Feb 2126 in Manchester.;NAME + DOB
+C066;Commander Chakotay can be reached at chakotay@maquis.org.;EMAIL
+C067;Mr. White holds security ID MI6-9027-ZU.;ID + PERSON
+C068;Beverly Crusher’s alternate contact is 289-555-3091.;PHONE NUMBER
+C069;Jadzia Dax resides at 14 Symbiont Circle, Whitby.;PERSON + ADDRESS
+C070;Email lily.sloane@zephram.corp for science updates.;EMAIL
+C071;Montgomery Scott was born on 03 Jun 2222 in Aberdeen.;NAME + DOB
+C072;Sylvia Trench holds SIN 502-799-420.;SIN
+C073;Address listed for Benjamin Sisko: 12 Promenade Lane, Whitby.;PERSON + ADDRESS
+C074;Bashir's ID badge is DS9-1138-ALT.;ID + PERSON
+C075;Beverly Hills number for Dr. Christmas Jones: 310-555-4040.;PHONE NUMBER
+C076;Captain Pike’s contact is christopher.pike@fleetcommand.com.;EMAIL
+C077;Guinan was born on 19 Mar 1600 in El-Aurian sector.;NAME + DOB
+C078;Bond's safe house: 5 Vesper Street, Whitby, Ontario.;PERSON + ADDRESS
+C079;Sarek’s clearance ID is VUL-0391-AMB.;ID + PERSON
+C080;Email oddjob@hatdelivery.uk for courier drop.;EMAIL
+C081;SIN assigned to Khan Noonien Singh: 999-001-000.;SIN
+C082;Seska’s phone number was intercepted: 437-555-2139.;PHONE NUMBER
+C083;Zefram Cochrane resides at 3 Warp Drive Crescent, Whitby.;PERSON + ADDRESS
+C084;El-Aurian files list LAF-4399 as Geordi La Forge’s ID.;ID + PERSON
+C085;Email jill.masterson@goldfinger.inc for documents.;EMAIL
+C086;Tasha Yar was born on 02 Jan 2337 in Turkana IV.;NAME + DOB
+C087;Email bashir.geneticops@section31.black;EMAIL
+C088;Tom Hardy's clone, Shinzon, holds ID code SHZ-1179.;ID + PERSON
+C089;Email emony.dax@ufp.gov for Trill medical research.;EMAIL
+C090;SIN 331-729-812 was issued to Wesley Crusher.;SIN
+C091;Valeris resides at 77 Peacekeeper Avenue, Whitby.;PERSON + ADDRESS
+C092;Phone contact for Garak’s tailor shop: 905-555-4462.;PHONE NUMBER
+C093;Dr. Pulaski was born on 11 Oct 2329 in Manhattan.;NAME + DOB
+C094;Bond’s MI6 registration is JB-7789-KB.;ID + PERSON
+C095;Section 31 contact line: 613-555-1731.;PHONE NUMBER
+C096;Le Chiffre lives at 10 Market Lane, Whitby.;PERSON + ADDRESS
+C097;Email worf.toronto@security.klingon.empire;EMAIL
+C098;Email Beverly.Crusher@whitbymed.gov for test results.;EMAIL
+C099;Data’s backup ID is 000-DT-B4;ID + PERSON
+C100;Saavik was born on 17 Oct 2225 in Romulan Federation.;NAME + DOB
