@@ -1,0 +1,15 @@
+{
+  "lora_rank": 8,
+  "learning_rate": 0.0003,
+  "retrieval_docs": 3,
+  "es_threshold": 0.5,
+  "dpdd": false,
+  "year_group": "post-2022",
+  "replication": 1,
+  "n_train": 139,
+  "n_val": 35,
+  "model_name": "meta-llama/Llama-3.1-8B",
+  "epochs": 2,
+  "batch_size": 1,
+  "max_length": 256
+}

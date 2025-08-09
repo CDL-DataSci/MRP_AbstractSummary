@@ -1,0 +1,42 @@
+[LOG] Writing training logs to checkpoints_dpdd/lr0.0003_r4_doc3_th0.5_yrpre-2018_rep2/train.log
+
+Epoch 1/2
+[DPDD] Score after epoch 1: 7.7359
+[DPDD] Dropped 20 / 202 samples for next epoch.
+[Checkpoint] Model saved to checkpoints_dpdd/lr0.0003_r4_doc3_th0.5_yrpre-2018_rep2/checkpoint_epoch_1
+[Validation] Loss after epoch 1: 0.8311
+
+Epoch 2/2
+[DPDD] Score after epoch 2: 5.3231
+[DPDD] Dropped 18 / 182 samples for next epoch.
+[Checkpoint] Model saved to checkpoints_dpdd/lr0.0003_r4_doc3_th0.5_yrpre-2018_rep2/checkpoint_epoch_2
+[Validation] Loss after epoch 2: 0.7135
+[HF Save] Model and tokenizer saved to checkpoints_dpdd/lr0.0003_r4_doc3_th0.5_yrpre-2018_rep2/hf_format
+Training complete.
+🔍 Generating summaries...
+/usr/local/lib/python3.11/dist-packages/transformers/generation/utils.py:1473: UserWarning: You have modified the pretrained model configuration to control generation. This is a deprecated strategy to control generation and will be removed soon, in a future version. Please use and modify the model generation configuration (see https://huggingface.co/docs/transformers/generation_strategies#default-text-generation-configuration )
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:418: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+[✓] Saved generated summaries to checkpoints_dpdd/lr0.0003_r4_doc3_th0.5_yrpre-2018_rep2/generated_summaries.jsonl
+[LOG] Writing training logs to checkpoints_dpdd/lr0.0003_r4_doc3_th0.5_yrpre-2018_rep2/train.log
+
+Epoch 1/2
+[DPDD] Score after epoch 1: 7.3878
+[DPDD] Dropped 20 / 202 samples for next epoch.
+[Checkpoint] Model saved to checkpoints_dpdd/lr0.0003_r4_doc3_th0.5_yrpre-2018_rep2/checkpoint_epoch_1
+[Validation] Loss after epoch 1: 0.8488
+
+Epoch 2/2
+[DPDD] Score after epoch 2: 7.6488
+[DPDD] Dropped 18 / 182 samples for next epoch.
+[Checkpoint] Model saved to checkpoints_dpdd/lr0.0003_r4_doc3_th0.5_yrpre-2018_rep2/checkpoint_epoch_2
+[Validation] Loss after epoch 2: 0.7417
+[HF Save] Model and tokenizer saved to checkpoints_dpdd/lr0.0003_r4_doc3_th0.5_yrpre-2018_rep2/hf_format
+Training complete.
+🔍 Generating summaries...
+/usr/local/lib/python3.11/dist-packages/transformers/generation/utils.py:1473: UserWarning: You have modified the pretrained model configuration to control generation. This is a deprecated strategy to control generation and will be removed soon, in a future version. Please use and modify the model generation configuration (see https://huggingface.co/docs/transformers/generation_strategies#default-text-generation-configuration )
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:418: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+[✓] Saved generated summaries to checkpoints_dpdd/lr0.0003_r4_doc3_th0.5_yrpre-2018_rep2/generated_summaries.jsonl

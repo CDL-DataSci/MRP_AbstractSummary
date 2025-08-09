@@ -1,0 +1,4 @@
+{"epoch": 1, "train_loss": 1.3523994864213584, "val_loss": 0.8310974421454411, "dpdd_score": 7.735850088594708, "dropped_count": 20, "learning_rate": 0.0003}
+{"epoch": 2, "train_loss": 0.7314093332369249, "val_loss": 0.7135469808297998, "dpdd_score": 5.323130403176937, "dropped_count": 18, "learning_rate": 0.0003}
+{"epoch": 1, "train_loss": 1.3628486502583663, "val_loss": 0.8487564617512273, "dpdd_score": 7.387828961860641, "dropped_count": 20, "learning_rate": 0.0003}
+{"epoch": 2, "train_loss": 0.7424810754728841, "val_loss": 0.7416894400821012, "dpdd_score": 7.648838516536676, "dropped_count": 18, "learning_rate": 0.0003}

@@ -1,0 +1,405 @@
+{
+  "global": {
+    "baseline": {
+      "rouge1": 0.06357610452448897,
+      "rouge2": 0.038017496903689975,
+      "rougeL": 0.06357610452448897,
+      "bertscore_precision": 0.7251059059743528,
+      "bertscore_recall": 0.8703295522265964,
+      "bertscore_f1": 0.7904547585381402,
+      "cesr": 0.059259259259259255,
+      "precision": 0.2962962962962963,
+      "recall": 0.2962962962962963
+    },
+    "dpdd": {
+      "rouge1": 0.0713105566365712,
+      "rouge2": 0.043629186551847055,
+      "rougeL": 0.0713105566365712,
+      "bertscore_precision": 0.7277409633000692,
+      "bertscore_recall": 0.8735610942045847,
+      "bertscore_f1": 0.7932789623737335,
+      "cesr": 0.06666666666666667,
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333
+    }
+  },
+  "by_hparam_combo": [
+    {
+      "learning_rate": 0.0003,
+      "lora_rank": 4.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "pre-2018",
+      "baseline": {
+        "rouge1": 0.03799334224494942,
+        "rouge2": 0.012865476335578156,
+        "rougeL": 0.03799334224494942,
+        "bertscore_precision": 0.7165404856204987,
+        "bertscore_recall": 0.8531674444675446,
+        "bertscore_f1": 0.7788096070289612,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "dpdd": {
+        "rouge1": 0.04046819590440526,
+        "rouge2": 0.014156990648682522,
+        "rougeL": 0.04046819590440526,
+        "bertscore_precision": 0.7170648872852325,
+        "bertscore_recall": 0.8529236614704132,
+        "bertscore_f1": 0.7790132164955139,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "learning_rate": NaN,
+      "lora_rank": NaN,
+      "retrieval_docs": NaN,
+      "es_threshold": NaN,
+      "year_group": null,
+      "baseline": {
+        "rouge1": null,
+        "rouge2": null,
+        "rougeL": null,
+        "bertscore_precision": null,
+        "bertscore_recall": null,
+        "bertscore_f1": null,
+        "cesr": null,
+        "precision": null,
+        "recall": null
+      },
+      "dpdd": {
+        "rouge1": null,
+        "rouge2": null,
+        "rougeL": null,
+        "bertscore_precision": null,
+        "bertscore_recall": null,
+        "bertscore_f1": null,
+        "cesr": null,
+        "precision": null,
+        "recall": null
+      }
+    },
+    {
+      "learning_rate": 0.0001,
+      "lora_rank": 8.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "post-2022",
+      "baseline": {
+        "rouge1": 0.07526822663916477,
+        "rouge2": 0.054749870231425836,
+        "rougeL": 0.07526822663916477,
+        "bertscore_precision": 0.7283409535884857,
+        "bertscore_recall": 0.8847110271453857,
+        "bertscore_f1": 0.7988619208335876,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "dpdd": {
+        "rouge1": 0.07520063571607535,
+        "rouge2": 0.054658651679830375,
+        "rougeL": 0.07520063571607535,
+        "bertscore_precision": 0.7270374894142151,
+        "bertscore_recall": 0.8850844502449036,
+        "bertscore_f1": 0.7982178032398224,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "learning_rate": 0.0001,
+      "lora_rank": 8.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "2018-2022",
+      "baseline": {
+        "rouge1": 0.08715433698503938,
+        "rouge2": 0.05394225834411082,
+        "rougeL": 0.08715433698503938,
+        "bertscore_precision": 0.7384437322616577,
+        "bertscore_recall": 0.879537433385849,
+        "bertscore_f1": 0.8009543716907501,
+        "cesr": 0.2,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "dpdd": {
+        "rouge1": 0.07802555647370318,
+        "rouge2": 0.046207154749084635,
+        "rougeL": 0.07802555647370318,
+        "bertscore_precision": 0.736151933670044,
+        "bertscore_recall": 0.8819640874862671,
+        "bertscore_f1": 0.8004716336727142,
+        "cesr": 0.2,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    {
+      "learning_rate": 0.0003,
+      "lora_rank": 8.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "post-2022",
+      "baseline": {
+        "rouge1": 0.08448281155831684,
+        "rouge2": 0.06291332477989958,
+        "rougeL": 0.08448281155831684,
+        "bertscore_precision": 0.7285219132900238,
+        "bertscore_recall": 0.886650949716568,
+        "bertscore_f1": 0.7997820973396301,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "dpdd": {
+        "rouge1": 0.07811938893168172,
+        "rouge2": 0.05736559796942384,
+        "rougeL": 0.07811938893168172,
+        "bertscore_precision": 0.7273513972759247,
+        "bertscore_recall": 0.8861733675003052,
+        "bertscore_f1": 0.7988662123680115,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "learning_rate": 0.0001,
+      "lora_rank": 4.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "post-2022",
+      "baseline": {
+        "rouge1": 0.0754078955941593,
+        "rouge2": 0.05481829553840088,
+        "rougeL": 0.0754078955941593,
+        "bertscore_precision": 0.7280035018920898,
+        "bertscore_recall": 0.8834882378578186,
+        "bertscore_f1": 0.7981756925582886,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "dpdd": {
+        "rouge1": 0.07472054053012289,
+        "rouge2": 0.05432494176651585,
+        "rougeL": 0.07472054053012289,
+        "bertscore_precision": 0.7275645732879639,
+        "bertscore_recall": 0.8849261701107025,
+        "bertscore_f1": 0.7984803915023804,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "learning_rate": 0.0003,
+      "lora_rank": 4.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "2018-2022",
+      "baseline": {
+        "rouge1": 0.11079238280883152,
+        "rouge2": 0.07148015255882038,
+        "rougeL": 0.11079238280883152,
+        "bertscore_precision": 0.7424296140670776,
+        "bertscore_recall": 0.8830294907093048,
+        "bertscore_f1": 0.8047327399253845,
+        "cesr": 0.2,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "dpdd": {
+        "rouge1": 0.11843567381087398,
+        "rouge2": 0.07706415234078728,
+        "rougeL": 0.11843567381087398,
+        "bertscore_precision": 0.744031548500061,
+        "bertscore_recall": 0.8826645016670227,
+        "bertscore_f1": 0.8056006729602814,
+        "cesr": 0.2,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    {
+      "learning_rate": 0.0003,
+      "lora_rank": 4.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "post-2022",
+      "baseline": {
+        "rouge1": 0.07658887811339837,
+        "rouge2": 0.0561069237531783,
+        "rougeL": 0.07658887811339837,
+        "bertscore_precision": 0.7288142442703247,
+        "bertscore_recall": 0.885325700044632,
+        "bertscore_f1": 0.7994231283664703,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "dpdd": {
+        "rouge1": 0.1017271802030521,
+        "rouge2": 0.07691823083354628,
+        "rougeL": 0.1017271802030521,
+        "bertscore_precision": 0.7326994240283966,
+        "bertscore_recall": 0.8888612687587738,
+        "bertscore_f1": 0.8031908869743347,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "learning_rate": 0.0001,
+      "lora_rank": 4.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "2018-2022",
+      "baseline": {
+        "rouge1": 0.077625742873838,
+        "rouge2": 0.045880968825408354,
+        "rougeL": 0.077625742873838,
+        "bertscore_precision": 0.7370055317878723,
+        "bertscore_recall": 0.8780095279216766,
+        "bertscore_f1": 0.799453616142273,
+        "cesr": 0.2,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "dpdd": {
+        "rouge1": 0.07826393366713807,
+        "rouge2": 0.04630648338007421,
+        "rougeL": 0.07826393366713807,
+        "bertscore_precision": 0.736482560634613,
+        "bertscore_recall": 0.878166675567627,
+        "bertscore_f1": 0.7991785109043121,
+        "cesr": 0.2,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    {
+      "learning_rate": 0.0001,
+      "lora_rank": 8.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "pre-2018",
+      "baseline": {
+        "rouge1": 0.04039703548933478,
+        "rouge2": 0.014091745538655567,
+        "rougeL": 0.04039703548933478,
+        "bertscore_precision": 0.7156800031661987,
+        "bertscore_recall": 0.8543881177902222,
+        "bertscore_f1": 0.7787426710128784,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "dpdd": {
+        "rouge1": 0.04145011962574378,
+        "rouge2": 0.014607185590139213,
+        "rougeL": 0.04145011962574378,
+        "bertscore_precision": 0.7140273153781891,
+        "bertscore_recall": 0.8536121547222137,
+        "bertscore_f1": 0.7774292826652527,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "learning_rate": 0.0003,
+      "lora_rank": 8.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "pre-2018",
+      "baseline": {
+        "rouge1": 0.038033245274260497,
+        "rouge2": 0.012922493063976533,
+        "rougeL": 0.038033245274260497,
+        "bertscore_precision": 0.7167040705680847,
+        "bertscore_recall": 0.853748619556427,
+        "bertscore_f1": 0.7791331112384796,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "dpdd": {
+        "rouge1": 0.037994481737959454,
+        "rouge2": 0.012800189181723147,
+        "rougeL": 0.037994481737959454,
+        "bertscore_precision": 0.7163421511650085,
+        "bertscore_recall": 0.854069858789444,
+        "bertscore_f1": 0.7790568768978119,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "learning_rate": 0.0001,
+      "lora_rank": 4.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "pre-2018",
+      "baseline": {
+        "rouge1": 0.04076397765075838,
+        "rouge2": 0.014326029867498313,
+        "rougeL": 0.04076397765075838,
+        "bertscore_precision": 0.7131678760051727,
+        "bertscore_recall": 0.8543746173381805,
+        "bertscore_f1": 0.777251660823822,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "dpdd": {
+        "rouge1": 0.04036225524490472,
+        "rouge2": 0.013922100815913751,
+        "rougeL": 0.04036225524490472,
+        "bertscore_precision": 0.714308887720108,
+        "bertscore_recall": 0.8547739088535309,
+        "bertscore_f1": 0.778104305267334,
+        "cesr": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "learning_rate": 0.0003,
+      "lora_rank": 8.0,
+      "retrieval_docs": 3.0,
+      "es_threshold": 0.5,
+      "year_group": "2018-2022",
+      "baseline": {
+        "rouge1": 0.07623108139010273,
+        "rouge2": 0.045081555941194576,
+        "rougeL": 0.07623108139010273,
+        "bertscore_precision": 0.7362382411956787,
+        "bertscore_recall": 0.8777769207954407,
+        "bertscore_f1": 0.7988426089286804,
+        "cesr": 0.2,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "dpdd": {
+        "rouge1": 0.09095871779319374,
+        "rouge2": 0.0552185596664435,
+        "rougeL": 0.09095871779319374,
+        "bertscore_precision": 0.7398293912410736,
+        "bertscore_recall": 0.8795130252838135,
+        "bertscore_f1": 0.8017377555370331,
+        "cesr": 0.2,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    }
+  ]
+}
