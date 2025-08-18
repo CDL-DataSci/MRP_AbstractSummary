@@ -1,2 +1,15 @@
-
-
+bert-score
+huggingface_hub
+matplotlib
+numpy
+pandas
+peft
+rouge-score
+scikit-learn
+statsmodels
+torch
+tqdm
+transformers
+accelerate
+safetensors
+sentencepiece
