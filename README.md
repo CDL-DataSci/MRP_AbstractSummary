@@ -42,17 +42,18 @@ Factor Design:
 * Step 1B: Defining PII with NER (PERSON, ORG, NORP, FAC) and Calculating Proxy DPDD Scores (see step1b.py)
 * Step 1C: TRAIN-TEST-VALIDATION SPLIT (70%-15%-15%) (see step1c.py)
 * Step 1D: Inserting CANARIES into TEST.csv (see step1d.py & canaries.csv)
-* Step 2: Finetuning Llama-3.1-8B and Factor Experiment (24 iterations of different combinations of factors, 2 replications for each iternation, and 2 epochs each run)
-* Step 3: Repeating the Factor Experiment, but with DPDD filtering to drop high-risk data during training.
-* Step 4A: Conducting Canary Extraction Success Rate (CESR) on both the baseline results and the DPDD filtered results.
-* Step 4B: Conduct further analysis, calculting ROUGE, BERTScore, Precision and Recall on the baseline results and DPDD filtered results.
-* Step 5: Human Review of Generated Summaries to compare with CESR results (selection of sample of 50 generated summaries for presence or absence of PII and canaries)
+* Step 2: Finetuning Llama-3.1-8B and Factor Experiment (24 iterations of different combinations of factors, 2 replications for each iternation, and 2 epochs each run) (see run_experiments.py)
+* Step 3: Repeating the Factor Experiment, but with DPDD filtering to drop high-risk data during training.(see run_experiments_dpdd.py)
+* Step 4A: Conduct analysis of evaluation metrics, which includes analysis of training log outputs (validation loss and DPDD scores - see TrainLog_evaluate.py), plus calculting ROUGE, BERTScore of generated summaries from baseline and DPDD-filtered results (see evaluate_metrics.py).
+* Step 4B: Conduct ANOVA against experiment factors (see evaluate_ANOVA.py) 
+* Step 5: Pass set prompts against basline and DPDD-filtered models to generate new outputs. Conducting Canary Extraction Success Rate (CESR) and Precision and Recall on both the baseline results and DPDD filtered results. (see evaluate_memorization.py)
+* Step 6: Human Review of Generated Summaries to compare with CESR results (selection of sample of 50 generated summaries for presence or absence of PII and canaries) (see prompt_probe.csv)
 
 
 # Exploratory Data Analysis
 
 The Town of Whitby council and committee minute dataset from 2008 to 2025 contains:
-* 1180 individual PDF files
+* Origianlly contained 1180 individual PDF files, reduced to 1167 after duplications removed
 * 10,941 pages in total
 * A mean of 9.27 pages per file 
 * A median value of 6 pages.
@@ -107,6 +108,16 @@ Trend showing categories with approximately 100 files or greater tend to have hi
 
 ## Table 3: First 5 Runs of the Baselining Factoral Experiment with 24 Combinations.
 <img width="432" height="391" alt="image" src="https://github.com/user-attachments/assets/01cf5e93-670d-4cf6-a1b8-d9635627bb68" />
+
+## Fig 3: Ranking Factor Configuration by Lowest Validation Loss.
+<img width="468" height="375" alt="image" src="https://github.com/user-attachments/assets/f33eab5b-2c74-4355-a875-e10cce0fe4ba" />
+
+## Table 4: Memorization Probe Summary
+Variant	Prompts	Recall	Precision	CESR	Total Canaries	Leak % 
+Baseline	25	0.232143	0.565217	0.344262	21	84
+DPDD	25	0.089286	0.714286	0.131148	8	32
+<img width="432" height="89" alt="image" src="https://github.com/user-attachments/assets/37b7e851-f231-4c95-87b1-64b674cc19b2" />
+
 
 
 
