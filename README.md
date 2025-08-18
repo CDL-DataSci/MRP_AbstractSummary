@@ -118,9 +118,6 @@ Trend showing categories with approximately 100 files or greater tend to have hi
 <img width="468" height="375" alt="image" src="https://github.com/user-attachments/assets/f33eab5b-2c74-4355-a875-e10cce0fe4ba" />
 
 ## Table 4: Memorization Probe Summary
-Variant	Prompts	Recall	Precision	CESR	Total Canaries	Leak % 
-Baseline	25	0.232143	0.565217	0.344262	21	84
-DPDD	25	0.089286	0.714286	0.131148	8	32
 <img width="500" height="89" alt="image" src="https://github.com/user-attachments/assets/37b7e851-f231-4c95-87b1-64b674cc19b2" />
 
 
