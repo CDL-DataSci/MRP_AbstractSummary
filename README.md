@@ -14,7 +14,13 @@ The current manual processes for identifying, reviewing, and retrieving public r
 * Limitations of keyword-based search in identifying responsive documents.
 * High resource cost associated with reviewing large volumes of documents or lengthy reports.
 
+What this study was able to demonstrate is the ability for LLMs to not only generate meaningful summaries, but without careful planning, the same LLMs have a measurable ability to memorize unique information, which could create a risk of future privacy breaches. On the other hand, and as confirmed across multiple evaluation metrics and assessments used in the MRP, the DPDD-filtered fine-tuned model showed a substantial reduction in risk of memorization of sensitive information, while preserving, and in some cases improving, the quality of the generated summary. 
+
+The baseline models demonstrated a clear tendency to reproduce memorized training artifacts, as evidenced by high Canary Extraction Success Rates (CESR) and moderate recall of sensitive strings generated from defined prompts. In contrast, the DPDD-filtered models significantly suppressed both intended and off-target canary retrievals. Notably, during the memorization probe, the baseline model reproduced sensitive PII from injected canaries in nearly all scenarios (84% of prompts returned sensitive information from an injected canary). In contrast, DPDD models defaulted to "NOT FOUND" and the total prompts that produced sensitive information from injected canaries dropped to 34%. Importantly, this gain in privacy protection came without compromising model utility: DPDD runs achieved slightly stronger ROUGE-L (+7.1%) and BERTScore (+0.54%) compared to the baseline.
+
 This experiment leverages the Llama 3.1b model, which is available here: https://huggingface.co/meta-llama/Llama-3.1-8B
+
+Additionally, to ensure sufficient processing capacity, the python scripts for this MRP were created to run PaperSpace, utilizing a A6000 X2 machine with 90 GB of ram, 16 CPUs and 48GB GPUs. Please see requirements.txt to set up a similar environment. Alternatively the python scripts can be adapted to suited to run in your perferred environment. 
 
 # Contents
 
@@ -26,7 +32,6 @@ This repo contains the following:
 * Whitby_Minutes_2025: Full dataset of all council and committee meeting minutes (2008 to 2025)
 * WhitbyPII: Directory containing all necessary py scripts and CSV files to reproduce project
 
-The repo will be kept up to date as the MRP progresses.
 
 # Experimental Design:
 The experimental design incorporates a factorial structure varying LoRA rank, retrieval settings, and DPDD preprocessing. Additionally, stratified sampling based on document length categories and publication years (grouped by periods identified during exploratory data analysis) will ensure robust performance across subsets of data. Data will be partitioned into distinct train-validation-test splits (70%-15%-15%), ensuring that hyperparameter tuning is performed using validation sets, while final model evaluation occurs exclusively on the test set.
@@ -116,7 +121,7 @@ Trend showing categories with approximately 100 files or greater tend to have hi
 Variant	Prompts	Recall	Precision	CESR	Total Canaries	Leak % 
 Baseline	25	0.232143	0.565217	0.344262	21	84
 DPDD	25	0.089286	0.714286	0.131148	8	32
-<img width="432" height="89" alt="image" src="https://github.com/user-attachments/assets/37b7e851-f231-4c95-87b1-64b674cc19b2" />
+<img width="500" height="89" alt="image" src="https://github.com/user-attachments/assets/37b7e851-f231-4c95-87b1-64b674cc19b2" />
 
 
 
